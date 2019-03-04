@@ -1,0 +1,176 @@
+
+    @import url('https://fonts.googleapis.com/css?family=Krub:300,400,500,600,700');
+
+    *
+    {
+        box-sizing              : border-box;
+    }
+
+/*  - --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+/*  -
+/*  -           BOARD
+/*  -
+/*  - --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+    #board
+    {
+        width                   : 600px;
+        height                  : 130px;
+
+        position                : fixed;
+        bottom                  : 20px;
+        left                    : 50%;
+        transform               : translateX(-50%);
+    }
+
+        #board > header
+        {
+            width                   : 100%;
+            height                  : 40px;
+            padding                 : 4px 16px;
+            box-sizing              : border-box;
+
+            position                : absolute;
+            top                     : 0px;
+            left                    : 0px;
+
+            display                 : flex;
+            flex-flow               : row nowrap;
+            justify-content         : flex-start;
+            align-items             : center;
+
+            font-family             : "Krub";
+            font-size               : 16px;
+            font-weight             : 500;
+            color                   : rgb(66,66,66);
+
+            background              : rgba(253,106,2,0.60);
+        }
+
+            #board > header > #button-add-tile-row,
+            #board > header > #button-del-tile-row
+            {
+                width                   : 24px;
+                height                  : 24px;
+                box-sizing              : border-box;
+
+                display                 : flex;
+                justify-content         : center;
+                align-items             : center;
+
+                font-family             : "Krub";
+                font-size               : 20px;
+                font-weight             : 500;
+                color                   : rgb(253,106,2);
+
+                background              : rgb(33,33,33);
+                border-radius           : 50%;
+                cursor                  : pointer;
+            }
+
+            #board > header > #button-add-tile-row
+            {
+                position                : absolute;
+                top                     : 50%;
+                right                   : 16px;
+                transform               : translateY(-50%);
+            }
+
+            #board > header > #button-del-tile-row
+            {
+                position                : absolute;
+                top                     : 50%;
+                right                   : 50px;
+                transform               : translateY(-50%);
+            }
+
+        #board > div
+        {
+            width                   : 100%;
+            height                  : calc(100% - 44px);
+
+            position                : absolute;
+            top                     : 44px;
+            left                    : 0px;
+
+            display                 : flex;
+            flex-flow               : column nowrap;
+            justify-content         : flex-start;
+            align-items             : center;
+
+            font-family             : "Krub";
+            font-size               : 16px;
+            font-weight             : 500;
+            color                   : rgb(250,250,250);
+
+            /* background              : rgba(0,0,0,0.30); */
+        }
+
+            #board > div > .tile-row
+            {
+                width                   : 100%;
+                height                  : 40px;
+
+                position                : relative;
+
+                display                 : flex;
+                flex-flow               : row nowrap;
+                justify-content         : flex-start;
+                align-items             : center;
+
+                border-bottom           : 2px solid rgba(253,106,2,0.60);
+            }
+
+/*              -  --  -- --  --  -- --  --  -- --  --  -- --  --  -- -- */
+/*              -
+/*              -           Board Tiles - Tile
+/*              -
+/*              -  --  -- --  --  -- --  --  -- --  --  -- --  --  -- -- */
+
+                #board > div > .tile-row > a[data-type="tile"]
+                {
+                    width                   : 36px;
+                    height                  : 36px;
+                    margin                  : 2px;
+                    padding                 : 2px 0px 0px;
+
+                    position                : relative;
+
+                    display                 : flex;
+                    flex-flow               : column nowrap;
+                    justify-content         : flex-start;
+                    align-items             : center;
+
+                    font-family             : "Krub";
+                    font-size               : 24px;
+                    font-weight             : 700;
+
+                    background              : url("../images/tile.svg");
+                    background-size         : contain;
+                    background-position     : center;
+                    background-repeat       : no-repeat;
+                }
+
+                #board > div > .tile-row > a[data-type="tile"][data-selected="false"]
+                {
+                    border                  : 0px;
+                }
+
+                #board > div > .tile-row > a[data-type="tile"][data-selected="true"]
+                {
+                    border                  : 2px dashed rgba(253,106,2,0.40);
+                }
+
+                #board > div > .tile-row > a[data-type="none"]
+                {
+                    width                   : 36px;
+                    height                  : 36px;
+                    margin                  : 2px;
+
+                    position                : relative;
+
+                    display                 : flex;
+                    flex-flow               : row nowrap;
+                    justify-content         : center;
+                    align-items             : center;
+                }
