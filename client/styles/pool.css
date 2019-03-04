@@ -1,0 +1,81 @@
+
+/*  - --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+/*  -
+/*  -           BOARD
+/*  -
+/*  - --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+    #pool-table
+    {
+        width                   : 1600px;
+        height                  : 800px;
+
+        position                : absolute;
+        top                     : 50%;
+        left                    : 50%;
+        transform               : translate(-50%, -50%) translateY(-80px);
+
+        display                 : flex;
+        justify-content         : center;
+        align-items             : center;
+
+        border                  : 1px solid rgba(0,0,0,0.20);
+        border-radius           : 4px;
+        background              : url("../images/background.jpg");
+        background-size         : 50%;
+        background-position     : center;
+        box-shadow              : 0px 0px 5px 0px rgba(0,0,0,0.20);
+    }
+
+        #pool-table > a
+        {
+            width                   : 36px;
+            height                  : 60px;
+            padding                 : 5px 0px;
+            cursor                  : pointer;
+
+            position                : absolute;
+            top                     : 50%;
+            left                    : 50%;
+            transform               : translate(-50%, -50%);
+
+            display                 : flex;
+            justify-content         : center;
+            align-items             : flex-start;
+
+            font-family             : "Krub";
+            font-size               : 20px;
+            font-weight             : 800;
+
+            background              : url("../images/tile.svg");
+            background-size         : contain;
+            background-position     : center;
+            background-repeat       : no-repeat;
+        }
+
+/*  - --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+/*  -
+/*  -           BOARD
+/*  -
+/*  - --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+    #button-switch-table
+    {
+        width                   : 40px;
+        height                  : 40px;
+
+        position                : fixed;
+        top                     : 20px;
+        right                   : 20px;
+
+        display                 : flex;
+        justify-content         : center;
+        align-items             : center;
+
+        font-family             : "Krub";
+        font-size               : 16px;
+        font-weight             : 800;
+
+        border                  : 1px solid rgba(0,0,0,0.40);
+        background              : rgba(253,106,2,0.60);
+    }
