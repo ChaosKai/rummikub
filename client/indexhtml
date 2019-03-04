@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <!-- Styles -->
+        <link rel="stylesheet" href="styles/board.css">
+        <link rel="stylesheet" href="styles/pool.css">
+        <link rel="stylesheet" href="styles/table.css">
+        <link rel="stylesheet" href="styles/players.css">
+        <!-- Scripts -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/0.3.18/peer.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/master.js"></script>
+        <script type="text/javascript" src="scripts/board.js"></script>
+        <script type="text/javascript" src="scripts/game.js"></script>
+        <script type="text/javascript" src="scripts/table.js"></script>
+    </head>
+    <body>
+
+        <section id="player-list">
+
+        </section>
+
+        <section id="pool-table">
+
+        </section>
+
+        <section id="game-table">
+
+        </section>
+
+        <a id="button-switch-table">
+            O
+        </a>
+
+        <section id="board">
+            <header>
+                Deine Spielsteine
+                <a id="button-del-tile-row">-</a>
+                <a id="button-add-tile-row">+</a>
+            </header>
+            <div id="tile-rows">
+
+            </div>
+        </section>
+
+    </body>
+</html>
