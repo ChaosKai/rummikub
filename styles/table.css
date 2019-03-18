@@ -7,13 +7,13 @@
 
     #game-table
     {
-        width                   : 1600px;
-        height                  : 800px;
+        width                   : 1400px;
+        height                  : 900px;
 
         position                : absolute;
         top                     : 50%;
         left                    : 50%;
-        transform               : translate(-50%, -50%) translateY(-80px);
+        transform               : translate(-50%, -50%) translateY(-80px) translateX(-160px);
 
         display                 : flex;
         justify-content         : center;
@@ -22,7 +22,7 @@
         border                  : 1px solid rgba(0,0,0,0.20);
         border-radius           : 4px;
         background              : url("../images/background.jpg");
-        background-size         : 50%;
+        background-size         : 400px;
         background-position     : center;
         box-shadow              : 0px 0px 5px 0px rgba(0,0,0,0.20);
     }
