@@ -1,7 +1,6 @@
 
 
     var Table = {
-        mode       : "pool",
         poolTiles  : [],
         tableTiles : []
     }
@@ -9,25 +8,6 @@
 
     $(document).ready( function()
     {
-        $("#game-table").hide();
-        $("#pool-table").show();
-
-        $("#button-switch-table").on("click", function()
-        {
-            if( Table.mode == "pool" )
-            {
-                $("#game-table").show();
-                $("#pool-table").hide();
-                Table.mode = "game";
-            }
-            else
-            {
-                $("#pool-table").show();
-                $("#game-table").hide();
-                Table.mode = "pool";
-            }
-        });
-
         $("#game-table").on("click", function()
         {
             moveTilesFromBoardToTable();
@@ -120,11 +100,11 @@
 
                 setTimeout(function()
                 {
-                    if( typeof movingGameTile == "object" )
+                    if( movingGameTile != null )
                     {
                         movingGameTile.pickup = false;
                     }
-                }, 200)
+                }, 100)
             });
 
             tile.on("mouseup", function(event)

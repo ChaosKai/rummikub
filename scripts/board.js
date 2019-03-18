@@ -87,7 +87,7 @@
         {
             conn.send({
                 action : "Game:Board:AddRow",
-                name   : player.name
+                player : player.name
             });
         });
 
@@ -95,7 +95,7 @@
         {
             conn.send({
                 action : "Game:Board:RemoveRow",
-                name   : player.name
+                player : player.name
             });
         });
     });
